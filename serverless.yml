@@ -4,11 +4,8 @@ provider:
   name: aws
   runtime: python3.6
   stage: production
-  region: ${opt:region, 'us-east-1'}
-  
-  # Add optional bucket deployement
-  # deploymentBucket: ${opt:bucket}
 
+  region: ${opt:region, 'us-west-2'}
 
   environment:
     PYTHONWARNINGS: ignore
@@ -31,6 +28,9 @@ provider:
   #       - "s3:GetObject"
   #     Resource:
   #       - "arn:aws:s3:::landsat-pds*"
+
+  # Add optional bucket deployement
+  # deploymentBucket: my-bucket-${self:provider.region}
 
   apiGateway:
     binaryMediaTypes:
