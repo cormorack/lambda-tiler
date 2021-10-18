@@ -3,7 +3,7 @@ repos:
     -
         repo: 'https://github.com/ambv/black'
         # 18.6b1
-        rev: ed50737290662f6ef4016a7ea44da78ee1eff1e2
+        rev: 21.9b0
         hooks:
             - id: black
               args: ['--safe']
@@ -23,7 +23,7 @@ repos:
     -
         repo: 'https://github.com/chewse/pre-commit-mirrors-pydocstyle'
         # 2.1.1
-        rev: 22d3ccf6cf91ffce3b16caa946c155778f0cb20f
+        rev: v2.1.1
         hooks:
             - id: pydocstyle
               language_version: python3.6
